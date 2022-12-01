@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;700&display=swap");
+
+body {
+  background-color: #1c1c1c;
+  min-height: 100vh;
+  display: flex;
+  font-family: "Karla";
+}
+
+main {
+  margin: auto;
+  display: flex;
+  background: #1f2937;
+  padding: 40px;
+}
+
+h2,
+p {
+  color: white;
+  margin: 0;
+}
+
+p {
+  font-weight: 200 !important;
+}
+
+span {
+  color: #4adf86;
+}
+
+.container {
+  margin: auto;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 30px;
+  color: white;
+  background: #10b981;
+  padding: 9px 17px 9px 15px;
+  border: none;
+  border-radius: 6px;
+}
+
+input[type="text"] {
+  color: #10b981;
+  background: #273549;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none !important;
+}
+
+hr {
+  border-width: 0;
+  background: #2f3e53;
+  margin: 20px 0;
+  height: 0.1px;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  margin: 0;
+  color: #10b981;
+  background: #273549;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.options {
+  text-align: left;
+  margin: 20px 0 10px;
+}
+
+label {
+  color: #10b981;
+}
+
+input[type="number"] {
+  position: relative;
+  margin: 0;
+  color: #ffffff;
+  background: #273549;
+  width: 50px;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 10px;
+  text-align: center;
+}
+
+#symbolBtn {
+  margin: 0;
+  background: #273549;
+}
+
+#error {
+  color: red;
+}
+
+@media screen and (min-width: 454px) {
+  .ms-lg {
+    margin-left: 10px;
+  }
+
+  .me-lg {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  input[type="text"] {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
