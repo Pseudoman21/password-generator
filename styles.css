@@ -105,6 +105,15 @@ input[type="number"] {
   color: red;
 }
 
+#copied-info {
+  visibility: hidden;
+  display: flex;
+  justify-content: end;
+  text-align: center;
+  color: rgb(113, 209, 126);
+  transition: all 0.3s ease-in-out;
+}
+
 @media screen and (min-width: 454px) {
   .ms-lg {
     margin-left: 10px;
