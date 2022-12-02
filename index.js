@@ -96,6 +96,11 @@ const generateBtnEl = document.getElementById('generateBtn')
 const symbolBtnEl = document.getElementById('symbolBtn')
 const passLengthEl = document.getElementById('passLength')
 const errorEl = document.getElementById('error')
+const firstPassEl = document.getElementById('firstPass')
+const secondPassEl = document.getElementById('secondPass')
+const passwords = document.getElementsByClassName('password')
+const copiedInfoEl = document.getElementById('copied-info')
+
 let useSymbols = true
 
 let symbols = []
@@ -166,8 +171,8 @@ function randomizer (array) {
 }
 
 generateBtnEl.addEventListener('click', function () {
-  document.getElementById('firstPass').value = randomizer(characters)
-  document.getElementById('secondPass').value = randomizer(characters)
+  firstPassEl.value = randomizer(characters)
+  secondPassEl.value = randomizer(characters)
 })
 
 symbolBtnEl.addEventListener('click', function () {
@@ -192,3 +197,18 @@ passLengthEl.addEventListener('change', function () {
     generateBtnEl.style.pointerEvents = 'unset'
   }
 })
+
+function copyPass (e) {
+  let copyPassword = document.getElementById(e.target.id)
+  copyPassword.select()
+  copyPassword.setSelectionRange(0, 99999)
+  navigator.clipboard.writeText(copyPassword.value)
+  copiedInfoEl.style.visibility = 'visible'
+  setTimeout(function () {
+    copiedInfoEl.style.visibility = 'hidden'
+  }, 2000)
+}
+
+for (let password of passwords) {
+  password.addEventListener('click', copyPass)
+}
